@@ -90,7 +90,7 @@ nav .logo-container .logo {
         to bottom,
         rgba(0, 0, 0, 0.65) 0%,
         rgba(0, 0, 0, 0) 100%
-    ), url('/Users/stiven.mike/Documents/LoveLink/lovelink/src/images/tinder_thailand_background_900x506.webp')
+    ), url('../src/images/tinder_thailand_background_900x506.webp')
 }
 
 .home {
