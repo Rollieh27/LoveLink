@@ -40,7 +40,7 @@ Coming Soon !
  @franksabogal04<br>
  @JoseneyJ<br>
  @izzyrkive<br>
- @ONikoCro
+ @NikoCro
 
 ## Licenses ##
 MIT License
