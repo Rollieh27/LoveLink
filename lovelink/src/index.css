@@ -88,7 +88,7 @@ nav .logo-container .logo {
     height: 100vh;
     position: relative;
     background:
-        url('/Users/nikolalucic/bootcamp/HOMEWORK/LoveLink/lovelink/src/images/wallpaper.jpg');
+        url('../src/images/wallpaper.jpg');
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
