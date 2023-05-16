@@ -84,12 +84,14 @@ nav .logo-container .logo {
 
 /*----Home page ----*/
 .overlay {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    position: fixed;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.65) 0%,
-            rgba(0, 0, 0, 0) 100%), url('/Users/nikolalucic/bootcamp/HOMEWORK/LoveLink/lovelink/src/images/tinder_thailand_background_900x506.webp')
+    position: relative;
+    background:
+        url('/Users/nikolalucic/bootcamp/HOMEWORK/LoveLink/lovelink/src/images/wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
 }
 
 .home {
@@ -128,6 +130,8 @@ nav .logo-container .logo {
     font-size: 17px;
 }
 
+/*---onboarding page----*/
+
 .onboarding form {
     display: flex;
     justify-content: center;
@@ -138,6 +142,7 @@ nav .logo-container .logo {
     flex-direction: column;
     padding: 20px;
     width: 35%;
+    text-align: start;
 }
 
 .onboarding form input {
@@ -155,6 +160,9 @@ nav .logo-container .logo {
     margin: 0;
 }
 
+.onboarding form label {
+    margin: 10px 0;
+}
 
 .onboarding form .multiple-input-container {
     display: flex;
@@ -172,3 +180,21 @@ nav .logo-container .logo {
     transition: all 0.3s;
     margin-right: 10px;
 }
+
+.onboarding form input[type=number] {
+    width: 20%;
+}
+
+.onboarding form input[type=radio] {
+    display: none;
+}
+
+.onboarding form input[type=submit]:hover {
+    background-color: rgb(254, 48, 114);
+}
+
+.onboarding form input[type=submit]:active {
+    background-color: blueviolet;
+}
+
+/*---dashboard page----*/
