@@ -1,26 +1,27 @@
 import TinderCard from "react-tinder-card";
 import { useState } from "react";
+import ChatContainer from "../components/ChatContainer";
 const Dashboard = () => {
   const characters = [
     {
-      name: "Richard Hendricks",
-      url: "./img/richard.jpg",
+      name: "Bearded Japanese Man",
+      url: "https://i.imgur.com/DKSuJL3.png",
     },
     {
-      name: "Erlich Bachman",
-      url: "./img/erlich.jpg",
+      name: "Harry Potter",
+      url: "https://i.imgur.com/DKSuJL3.png",
     },
     {
-      name: "Monica Hall",
-      url: "./img/monica.jpg",
+      name: "Monica Rambeau",
+      url: "https://i.imgur.com/DKSuJL3.png",
     },
     {
-      name: "Jared Dunn",
-      url: "./img/jared.jpg",
+      name: "Peter Parker",
+      url: "https://i.imgur.com/DKSuJL3.png",
     },
     {
-      name: "Dinesh Chugtai",
-      url: "./img/dinesh.jpg",
+      name: "Penelope Cruz",
+      url: "https://i.imgur.com/DKSuJL3.png",
     },
   ];
 
@@ -37,6 +38,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
+      <ChatContainer></ChatContainer>
       <div className="swipe-container">
         <div className="card-container">
           {characters.map((character) => (

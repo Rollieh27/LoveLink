@@ -1,23 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia');
 
 html,
 body {
     margin: 0;
     padding: 0;
     text-align: center;
+    font-family: 'Sofia';
+    font-size: 22px;
 }
+
 
 h2 {
     font-style: italic;
 }
 
-* {
-    font-family: 'Roboto Slab', sans-serif;
+.home {
+
+    text-align: center;
+    top: -50px
 }
 
 .primary-title {
     font-size: 90px;
     color: rgba(255, 255, 255);
+    font-family: "Sofia";
+
+    margin-bottom: -80px;
+
+
+}
+
+p {
+    font-size: 40px;
+    color: rgba(255, 255, 255);
+    font-family: "Sofia";
+    padding: 0;
+    margin-bottom: -10px;
+    text-align: center;
+
 }
 
 .primary-button {
@@ -28,6 +48,7 @@ h2 {
     padding: 12px 30px;
     border-radius: 30px;
     border: none;
+    margin-top: 13px;
 }
 
 .primary-button:hover {
@@ -87,8 +108,7 @@ nav .logo-container .logo {
     width: 100%;
     height: 100vh;
     position: relative;
-    background:
-        url('../src/images/wallpaper.jpg');
+    background: url('../src/images/wallpaper.jpg');
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
@@ -123,11 +143,18 @@ nav .logo-container .logo {
     flex-direction: column;
 }
 
-.auth-modal input[type=password],
+.auth-modal input[type=password] {
+    max-width: fit-content;
+    border: 2px solid orangered;
+    vertical-align: auto
+}
+
 .auth-modal input[type=email] {
     padding: 8px;
-    margin: 8px;
+    margin: 3px;
     font-size: 17px;
+    max-width: fit-content;
+    border: 2px solid orangered
 }
 
 /*---onboarding page----*/
@@ -198,3 +225,56 @@ nav .logo-container .logo {
 }
 
 /*---dashboard page----*/
+
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard .swipe-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.swipe {
+    position: absolute;
+}
+
+.dashboard.card-container {
+    width: 400px;
+    max-width: 260px;
+    height: 650px;
+}
+
+.card {
+
+    width: 400px;
+    height: 650px;
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.30);
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* ---Chat Container--- */
+
+.chat-container {
+    background-color: white;
+    width: 30%;
+
+
+}
+
+.chat-container.chat-container-header {
+    background: linear-gradient(260deg, rgb(254, 48, 114), rgb(255, 89, 64));
+}
