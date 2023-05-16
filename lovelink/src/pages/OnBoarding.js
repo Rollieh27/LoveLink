@@ -174,7 +174,7 @@ const OnBoarding = () => {
               required={true}
             />
             <div className="photo-container"></div>
-            <img src={formData.url} alt="profile photo" />
+            <img src={formData.url} alt="profile pic" />
           </section>
         </form>
       </div>
