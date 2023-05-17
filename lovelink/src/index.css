@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Sofia');
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script');
 
 html,
 body {
     margin: 0;
     padding: 0;
     text-align: center;
-    font-family: 'Sofia';
+    font-family: 'DM Sans';
     font-size: 22px;
 }
 
@@ -17,27 +17,14 @@ h2 {
 .home {
 
     text-align: center;
-    top: -50px
+
 }
 
 .primary-title {
     font-size: 90px;
     color: rgba(255, 255, 255);
-    font-family: "Sofia";
-
-    margin-bottom: -80px;
-
-
-}
-
-p {
-    font-size: 40px;
-    color: rgba(255, 255, 255);
-    font-family: "Sofia";
-    padding: 0;
-    margin-bottom: -10px;
-    text-align: center;
-
+    font-family: "Meow Script";
+    /* margin-bottom: -80px; */
 }
 
 .primary-button {
@@ -48,7 +35,7 @@ p {
     padding: 12px 30px;
     border-radius: 30px;
     border: none;
-    margin-top: 13px;
+    margin-top: 0;
 }
 
 .primary-button:hover {
@@ -100,7 +87,7 @@ nav .logo-container {
 }
 
 nav .logo-container .logo {
-    width: 100%;
+    width: 110%;
 }
 
 /*----Home page ----*/

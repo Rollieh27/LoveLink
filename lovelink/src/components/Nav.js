@@ -1,4 +1,4 @@
-import logo from "../images/logo.png";
+import logo from "../images/whitelogo.png";
 import redlogo from "../images/redlogo.png";
 const Nav = ({ minimal, setShowModal, showModal, setIsSignUp }) => {
   const handleClick = () => {

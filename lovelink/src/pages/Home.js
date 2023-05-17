@@ -24,7 +24,6 @@ const Home = () => {
       />
       <div className="home">
         <h1 className="primary-title">LoveLink</h1>
-        <p>Love is just a link away</p>
         <button className="primary-button" onClick={handleClick}>
           {authToken ? "signout" : "Create Account"}
         </button>
