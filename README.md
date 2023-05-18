@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+  [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# LoveLink: Love is just a click away #
 
-## Available Scripts
+Deployed Link: [Click Here](https://lovelink.herokuapp.com/)
 
-In the project directory, you can run:
+## Table of contents
+* [Introduction](#introduction)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Challenges](#challenges)
+* [Future Features](#future-features)
+* [Status](#status)
+* [Collaborators](#collaborators)
+* [Licenses](#licenses)
 
-### `npm start`
+## Introduction ##
+Are you tired of swiping left and right, hoping to find true love? 
+Introducing Love Link, the revolutionary dating site that brings people together with just a click. With our cutting-edge technology and advanced matchmaking algorithms, love is just a link away!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Love Link understands that finding your perfect match can be overwhelming. Our platform is designed to connect like-minded individuals based on shared interests, values, and compatibility. We believe that true love goes beyond superficial appearances, and our unique compatibility tests ensure that you connect with someone who truly understands and complements you.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+With Love Link, you can wave goodbye to endless scrolling and fruitless conversations. Our intelligent system presents you with carefully curated profiles, making it easier than ever to find your soulmate. Our members are genuine, verified individuals who are as serious about finding love as you are.
 
-### `npm test`
+Love Link's user-friendly interface and seamless communication tools make it effortless to connect and build meaningful connections. Love Link is the perfect platform to discover and nurture relationships.
+Don't wait another moment to find love! Join Love Link today and embark on a journey towards a deep, meaningful connection. Remember, love is just a link away.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Screenshots ##
+TBD
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies ##
+MongoDB, Express, React, NodeJS, GraphQL, Mongoose, Heroku, VS Code
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Challenges ##
+* 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Future Features ##
+* Unlimited Likes 
+* Ability to see who liked you 
+* Addition filtering options 
+* Premium Plans
+* Superboost 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Status ##
+Coming Soon !
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Collaborators ##
+ @Rollieh27<br>
+ @franksabogal04<br>
+ @JoseneyJ<br>
+ @izzyrkive<br>
+ @NikoCro
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Licenses ##
+MIT License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Copyright (c) 2023 [Frank, Niko, Izzy, Rollie, Jojo]
 
-## Learn More
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
