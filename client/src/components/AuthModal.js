@@ -1,16 +1,16 @@
 import { useState } from "react";
-import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
-import { useCookies } from 'react-cookie'
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 const AuthModal = ({ setShowModal, isSignUp }) => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
   const [confirmPassword, setConfirmPassword] = useState(null);
   const [error, setError] = useState(null);
-  const [cookies, setCookie, removeCookie] = useCookies(['user'])
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
 
-  let navigate = useNavigate
+  let navigate = useNavigate;
 
   console.log(email, password, confirmPassword);
 
@@ -23,20 +23,22 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
     try {
       if (isSignUp && password !== confirmPassword) {
         setError("Passwords need to match!");
-        return
-      } 
-      console.log('posting', email, password)
-      const response = await axios.post(`http://localhost:8000/${isSignUp ? 'signup' : 'login'}`, {email, password })
+        return;
+      }
+      console.log("posting", email, password);
+      const response = await axios.post(
+        `http://localhost:8000/${isSignUp ? "signup" : "login"}`,
+        { email, password }
+      );
 
-      setCookie('Email', response.data.email)
-      setCookie('userId', response.data.userId)
-      setCookie('AuthToken', response.data.token)
+      setCookie("Email", response.data.email);
+      setCookie("userId", response.data.userId);
+      setCookie("AuthToken", response.data.token);
 
-      const success = response.status === 201
+      const success = response.status === 201;
 
-      if (success && isSignUp) navigate('/onboarding')
-      if (success && !isSignUp) navigate('/dashboard')
-      
+      if (success && isSignUp) navigate("/onboarding");
+      if (success && !isSignUp) navigate("/dashboard");
     } catch (error) {
       console.log(error);
     }
@@ -82,8 +84,8 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
         <input className="secondary-button" type="submit" />
         <p>{error}</p>
       </form>
-      {/* <hr/>
-            <h2>GET THE APP</h2> */}
+      <hr />
+      <h4>APP COMING SOON</h4>
     </div>
   );
 };
