@@ -27,7 +27,7 @@ const Home = () => {
         <h1 className="primary-title">LoveLink</h1>
         {/* <Link className="btn btn-lg btn-info m-2" to="/onboarding"> */}
         <button className="primary-button" onClick={handleClick}>
-          {authToken ? "signout" : "Log in/Sign up"}
+          {authToken ? "signout" : "Log In / Sign Up"}
         </button>
         {/* </Link> */}
 
