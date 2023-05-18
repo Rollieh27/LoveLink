@@ -123,6 +123,7 @@ nav .logo-container .logo {
 
 .auth-modal .close-icon {
     float: right;
+    cursor: pointer;
 }
 
 .auth-modal form {

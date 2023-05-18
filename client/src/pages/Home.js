@@ -25,7 +25,7 @@ const Home = () => {
       <div className="home">
         <h1 className="primary-title">LoveLink</h1>
         <button className="primary-button" onClick={handleClick}>
-          {authToken ? "signout" : "Create Account"}
+          {authToken ? "signout" : "Log In / Sign Up"}
         </button>
 
         {showModal && (
