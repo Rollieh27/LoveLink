@@ -8,9 +8,9 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
   const [password, setPassword] = useState(null);
   const [confirmPassword, setConfirmPassword] = useState(null);
   const [error, setError] = useState(null);
-  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+  const [cookies, setCookie, removeCookie] = useCookies(null);
 
-  let navigate = useNavigate;
+  let navigate = useNavigate();
 
   console.log(email, password, confirmPassword);
 
@@ -21,17 +21,16 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      if (isSignUp && password !== confirmPassword) {
+      if (isSignUp && (password !== confirmPassword)) {
         setError("Passwords need to match!");
         return;
       }
-      console.log("posting", email, password);
+
       const response = await axios.post(
         `http://localhost:8000/${isSignUp ? "signup" : "login"}`,
         { email, password }
       );
 
-      setCookie("Email", response.data.email);
       setCookie("userId", response.data.userId);
       setCookie("AuthToken", response.data.token);
 

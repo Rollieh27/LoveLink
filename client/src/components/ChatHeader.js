@@ -1,4 +1,13 @@
+import { useCookies } from 'react-cookie'
+
 const ChatHeader = () => {
+  const [ cookies, setCookie, removeCookie ] = useCookies(['user'])
+
+  const logout = () => {
+      removeCookie('UserId', cookies.UserId)
+      removeCookie('AuthToken', cookies.AuthToken)
+      window.location.reload()
+  }
   return (
     <div className="chat-container-header">
       <div className="profile">
