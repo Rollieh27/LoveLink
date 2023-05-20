@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Book } = require("../models");
+const { User, Match, Message } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -18,6 +18,16 @@ const resolvers = {
       };
       users.push(newUser);
       return newUser;
+    },
+    deleteUser: (_, { userId }) => {
+      const userIndex = users.findIndex((user) => user._id === userId);
+
+      if (userIndex === -1) {
+        throw new Error("User not found.");
+      }
+
+      const deletedUser = users.splice(userIndex, 1)[0];
+      return deletedUser;
     },
     createMessage: (_, { senderId, receiverId, content, createdAt }) => {
       const newMessage = {
