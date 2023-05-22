@@ -27,9 +27,15 @@ const typeDefs = gql`
     messages: [Message]
     matches: [Match]
   }
+  type Auth {
+    token: ID!
+    user: User
+  }
 
   type Mutation {
     createUser(username: String!, createdAt: String!): User
+    addUser(username: String!, email: String!, password: String!): Auth
+    deleteUser(userId: ID): User
     createMessage(
       senderId: ID!
       receiverId: ID!
@@ -37,6 +43,7 @@ const typeDefs = gql`
       createdAt: String!
     ): Message
     createMatch(user1Id: ID!, user2Id: ID!, createdAt: String!): Match
+    login(email: String!, password: String!): Auth
   }
 `;
 
