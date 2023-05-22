@@ -6,11 +6,24 @@ import { useState } from "react";
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
   const [isSignUp, setIsSignUp] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [authToken, setAuthToken] = useState(false);
 
-  const authToken = false;
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
+    if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return;
+    }
+
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
+  };
   const handleClick = () => {
-    console.log("clicked");
     setShowModal(true);
     setIsSignUp(true);
   };
@@ -32,7 +45,17 @@ const Home = () => {
         {/* </Link> */}
 
         {showModal && (
-          <AuthModal setShowModal={setShowModal} isSignUp={isSignUp} />
+          <AuthModal
+            setShowModal={setShowModal}
+            isSignUp={isSignUp}
+            handleSubmit={handleSubmit}
+            email={email}
+            setEmail={setEmail}
+            password={password}
+            setPassword={setPassword}
+            confirmPassword={confirmPassword}
+            setConfirmPassword={setConfirmPassword}
+          />
         )}
       </div>
     </div>

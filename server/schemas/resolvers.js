@@ -10,6 +10,7 @@ const resolvers = {
   },
 
   Mutation: {
+    // ----- not how users are created with sequelize
     createUser: (_, { username, createdAt }) => {
       const newUser = {
         _id: String(users.length + 1),
@@ -19,6 +20,7 @@ const resolvers = {
       users.push(newUser);
       return newUser;
     },
+    // ----- dont use
     deleteUser: (_, { userId }) => {
       const userIndex = users.findIndex((user) => user._id === userId);
 
