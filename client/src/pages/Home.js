@@ -7,6 +7,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
+  const [signUpModal, setSignUpModal] = useState(false);
   const [isSignUp, setIsSignUp] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -31,8 +32,8 @@ const Home = () => {
     // } else {
     //   window.location.href = "/signup";
     // }
-    setShowModal(true);
-    setIsSignUp(true);
+    setSignUpModal(true);
+    //setIsSignUp(true);
   };
   return (
     <div className="overlay">
@@ -49,18 +50,26 @@ const Home = () => {
         <button className="primary-button" onClick={handleClick}>
           {authToken ? "signout" : "Sign Up"}
         </button>
-        {showModal && (
-          <AuthModal
-            setShowModal={setShowModal}
-            isSignUp={isSignUp}
-            handleSubmit={handleSubmit}
-            email={email}
-            setEmail={setEmail}
-            password={password}
-            setPassword={setPassword}
-            confirmPassword={confirmPassword}
-            setConfirmPassword={setConfirmPassword}
+        {signUpModal && (
+          <SignupForm
+          setSignUpModal={setSignUpModal}
           />
+        )
+        }
+        {showModal && (
+          <>
+            <AuthModal
+              setShowModal={setShowModal}
+              isSignUp={isSignUp}
+              handleSubmit={handleSubmit}
+              email={email}
+              setEmail={setEmail}
+              password={password}
+              setPassword={setPassword}
+              confirmPassword={confirmPassword}
+              setConfirmPassword={setConfirmPassword}
+            />
+          </>
         )}
       </div>
     </div>

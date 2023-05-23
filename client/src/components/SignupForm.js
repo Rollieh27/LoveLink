@@ -9,6 +9,7 @@ const SignupForm = () => {
   const [userFormData, setUserFormData] = useState({
     email: "",
     password: "",
+    confirm: "",
   });
   // set state for form validation
   const [validated] = useState(false);
@@ -49,6 +50,7 @@ const SignupForm = () => {
       username: "",
       email: "",
       password: "",
+      confirm: "",
     });
   };
 
@@ -101,9 +103,9 @@ const SignupForm = () => {
           <Form.Control
             type="password"
             placeholder="Confirm your password"
-            name="password"
+            name="confirm"
             onChange={handleInputChange}
-            value={userFormData.password}
+            value={userFormData.confirm}
             required
           />
           <Form.Control.Feedback type="invalid">
@@ -111,13 +113,14 @@ const SignupForm = () => {
           </Form.Control.Feedback>
         </Form.Group>
         <Button
-          disabled={
-            !(
-              userFormData.username &&
-              userFormData.email &&
-              userFormData.password
-            )
-          }
+          // disabled={
+          //   !(
+          //     userFormData.username &&
+          //     userFormData.email &&
+          //     userFormData.password &&
+          //     userFormData.confirm
+          //   )
+          // }
           type="submit"
           variant="success"
         >

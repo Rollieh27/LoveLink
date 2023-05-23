@@ -3,8 +3,7 @@ const { gql } = require("apollo-server-express");
 const typeDefs = gql`
   type User {
     _id: ID!
-    username: String!
-    createdAt: String!
+    username: String
   }
 
   type Message {
@@ -12,14 +11,12 @@ const typeDefs = gql`
     senderId: ID!
     receiverId: ID!
     content: String!
-    createdAt: String!
   }
 
   type Match {
     _id: ID!
     user1Id: ID!
     user2Id: ID!
-    createdAt: String!
   }
 
   type Query {
@@ -34,13 +31,12 @@ const typeDefs = gql`
 
   type Mutation {
     createUser(username: String!, createdAt: String!): User
-    addUser(username: String!, email: String!, password: String!): Auth
+    addUser(username: String, email: String!, password: String!): Auth
     deleteUser(userId: ID): User
     createMessage(
       senderId: ID!
       receiverId: ID!
       content: String!
-      createdAt: String!
     ): Message
     createMatch(user1Id: ID!, user2Id: ID!, createdAt: String!): Match
     login(email: String!, password: String!): Auth
