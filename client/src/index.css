@@ -274,11 +274,12 @@ nav .logo-container .logo {
     border-radius: 50px;
     background-size: cover;
     background-position: center;
-
 }
 
 .card h3 {
     margin-top: 0;
+    padding-top: 3px;
+    margin-bottom: 575px;
 }
 
 /* ---Chat Container--- */
