@@ -37,7 +37,7 @@ const OnBoarding = () => {
 
         <form onSubmit={handleSubmit}>
           <section>
-            <label htmlFor="first_name">First Name</label>
+            <label htmlFor="first_name">Username</label>
             <input
               id="first_name"
               type="text"
