@@ -8,6 +8,7 @@ import { Link, useLocation } from "react-router-dom";
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
+  const [loginModal, setLoginModal] = useState(false);
   const [isSignUp, setIsSignUp] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -33,6 +34,7 @@ const Home = () => {
     //   window.location.href = "/signup";
     // }
     setSignUpModal(true);
+    setLoginModal(true)
     //setIsSignUp(true);
   };
   return (
@@ -53,6 +55,12 @@ const Home = () => {
         {signUpModal && (
           <SignupForm
           setSignUpModal={setSignUpModal}
+          />
+        )
+        }
+        {loginModal&& (
+          <setLoginModal
+          setLoginModal={setLoginModal}
           />
         )
         }

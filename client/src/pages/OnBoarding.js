@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Nav from "../components/Nav";
+import seeds from "/Users/stiven.mike/Documents/LoveLink-2/seeds"
 
 const OnBoarding = () => {
   const [formData, setFormData] = useState({

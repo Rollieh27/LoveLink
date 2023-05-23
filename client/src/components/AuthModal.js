@@ -2,6 +2,9 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from "../utils/mutations";
+import auth from "../utils/auth";
 
 const AuthModal = ({ setShowModal, isSignUp }) => {
   const [email, setEmail] = useState(null);
@@ -9,7 +12,7 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
   const [confirmPassword, setConfirmPassword] = useState(null);
   const [error, setError] = useState(null);
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
-
+  const [login] = useMutation(LOGIN_USER)
   let navigate = useNavigate;
 
   console.log(email, password, confirmPassword);
@@ -26,19 +29,24 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
         return;
       }
       console.log("posting", email, password);
-      const response = await axios.post(`${isSignUp ? "signup" : "login"}`, {
-        email,
-        password,
-      });
+      const {data} = await login({
+        variables:{email,password}
+      })
+      alert(data.login.token)
+      auth.login(data.login.token)
+      // const response = await axios.post(`${isSignUp ? "signup" : "login"}`, {
+      //   email,
+      //   password,
+      // });
 
-      setCookie("Email", response.data.email);
-      setCookie("userId", response.data.userId);
-      setCookie("AuthToken", response.data.token);
+      // setCookie("Email", response.data.email);
+      // setCookie("userId", response.data.userId);
+      // setCookie("AuthToken", response.data.token);
 
-      const success = response.status === 201;
+      // const success = response.status === 201;
 
-      if (success && isSignUp) navigate("/onboarding");
-      if (success && !isSignUp) navigate("/dashboard");
+      // if (success && isSignUp) navigate("/onboarding");
+      // if (success && !isSignUp) navigate("/dashboard");
     } catch (error) {
       console.log(error);
     }
