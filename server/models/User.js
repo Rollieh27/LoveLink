@@ -18,9 +18,9 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    profile: {
-      bio: String,
-    },
+    // profile: {
+    //   bio: String,
+    // },
     pictures: [
       {
         url: String,

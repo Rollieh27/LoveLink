@@ -5,7 +5,7 @@ const Dashboard = () => {
   const characters = [
     {
       name: "Bearded Japanese Man",
-      url: "https://i.imgur.com/DKSuJL3.png",
+      url: "https://randomuser.me/api/portraits/men/46.jpg",
     },
     {
       name: "Harry Potter",
@@ -39,23 +39,24 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <ChatContainer />
-      {/* <div className="swipe-container"> */}
-      <div className="card-container">
-        {characters.map((character) => (
-          <TinderCard
-            className="swipe"
-            key={character.name}
-            onSwipe={(dir) => swiped(dir, character.name)}
-            onCardLeftScreen={() => outOfFrame(character.name)}
-          >
-            <div
-              style={{ backgroundImage: "url(" + character.url + ")" }}
-              className="card"
+      <div className="container">
+        <div className="card-container">
+          {characters.map((character) => (
+            <TinderCard
+              className="swipe"
+              key={character.name}
+              onSwipe={(dir) => swiped(dir, character.name)}
+              onCardLeftScreen={() => outOfFrame(character.name)}
             >
-              <h3>{character.name}</h3>
-            </div>
-          </TinderCard>
-        ))}
+              <div
+                style={{ backgroundImage: "url(" + character.url + ")" }}
+                className="card"
+              >
+                <h3>{character.name}</h3>
+              </div>
+            </TinderCard>
+          ))}
+        </div>
       </div>
       {/* </div> */}
     </div>
