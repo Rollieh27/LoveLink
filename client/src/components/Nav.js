@@ -1,12 +1,13 @@
 import logo from "../images/whitelogo.png";
 import redlogo from "../images/redlogo.png";
-const Nav = ({ minimal, setShowModal, showModal, setIsSignUp }) => {
+const Nav = ({ minimal, authToken, setShowModal, showModal, setIsSignUp }) => {
   const handleClick = () => {
+    // window.location.href = "/login";
+
     setShowModal(true);
     setIsSignUp(false);
   };
 
-  const authToken = true;
   return (
     <nav>
       <div className="logo-container">

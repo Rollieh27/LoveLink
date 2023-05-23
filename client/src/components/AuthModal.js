@@ -26,7 +26,7 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
         return;
       }
       console.log("posting", email, password);
-      const response = await axios.post(`/${isSignUp ? "signup" : "login"}`, {
+      const response = await axios.post(`${isSignUp ? "signup" : "login"}`, {
         email,
         password,
       });
