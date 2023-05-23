@@ -2,38 +2,49 @@ const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
 const userSchema = new Schema(
-  {
-    username: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-      match: [/.+@.+\..+/, "Must use a valid email address"],
-    },
-    password: {
-      type: String,
-      required: true,
-    },
-    // profile: {
-    //   bio: String,
-    // },
-    pictures: [
-      {
-        url: String,
+    {
+      username: {
+        type: String,
+        required: true,
+        unique: true,
       },
-    ],
-  },
-  // set this to use virtual below
-  {
-    toJSON: {
-      virtuals: true,
+      email: {
+        type: String,
+        required: true,
+        unique: true,
+        match: [/.+@.+\..+/, "Must use a valid email address"],
+      },
+      password: {
+        type: String,
+        required: true,
+      },
+      age: {
+        type: Number,
+        required: true,
+      },
+      gender: {
+        type: String,
+        required: true,
+      },
+      interests: {
+        type: String,
+        required: true,
+      },
+      profile: {
+        bio: String,
+      },
+      pictures: [
+        {
+          url: String,
+        },
+      ],
     },
-  }
-);
+    {
+      toJSON: {
+        virtuals: true,
+      },
+    }
+  );
 
 userSchema.pre("save", async function (next) {
   if (this.isNew || this.isModified("password")) {
