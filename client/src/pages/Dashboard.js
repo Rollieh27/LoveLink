@@ -19,7 +19,7 @@ const Dashboard = () => {
     },
     {
       name: "Matthew",
-      url: "https://randomuser.me/api/portraits/med/men/15.jpg",
+      url: "https://randomuser.me/api/portraits/med/men/98.jpg",
       age: 27,
       gender: "Male",
       interests: ["Stamp collecting", "Corsage"],
