@@ -34,7 +34,7 @@ const Home = () => {
     //   window.location.href = "/signup";
     // }
     setSignUpModal(true);
-    setLoginModal(true)
+    setLoginModal(true);
     //setIsSignUp(true);
   };
   return (
@@ -52,18 +52,8 @@ const Home = () => {
         <button className="primary-button" onClick={handleClick}>
           {authToken ? "signout" : "Sign Up"}
         </button>
-        {signUpModal && (
-          <SignupForm
-          setSignUpModal={setSignUpModal}
-          />
-        )
-        }
-        {loginModal&& (
-          <setLoginModal
-          setLoginModal={setLoginModal}
-          />
-        )
-        }
+        {signUpModal && <SignupForm setSignUpModal={setSignUpModal} />}
+        {loginModal && <setLoginModal setLoginModal={setLoginModal} />}
         {showModal && (
           <>
             <AuthModal

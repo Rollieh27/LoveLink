@@ -115,6 +115,85 @@ nav .logo-container .logo {
     margin-top: 30vh;
 }
 
+.signup-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-popup-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    width: 360px;
+    height: 600px;
+}
+
+.signup-popup-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-popup-content .form-group {
+    margin-bottom: 0px;
+}
+
+.signup-popup-content .form-group label {
+    display: block;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.signup-popup-content form .form-control {
+    margin-bottom: 40px;
+}
+
+/* .signup-popup-content form .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+
+    font-weight: bold;
+
+} */
+
+.signup-popup-content .note {
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    font-size: 16px;
+}
+
+.signup-popup-content .submit-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 15x;
+    margin-left: 10px;
+}
+
+.signup-popup-content .submit-button button {
+    width: 180px;
+    height: 35px;
+    font-size: 18px;
+    background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+    border-radius: 10px;
+}
+
+.signup-popup-content input::placeholder {
+    text-align: center;
+    font-size: 15px;
+}
+
 /*---auth-modal----*/
 
 .auth-modal {
@@ -147,7 +226,6 @@ nav .logo-container .logo {
     font-size: 17px;
     max-width: fit-content;
     margin-left: 80px;
-    /* border: 2px solid orangered, */
 
 }
 
@@ -158,7 +236,6 @@ nav .logo-container .logo {
     max-width: fit-content;
     margin-left: 80px;
 
-    /* border: 2px solid orangered */
 }
 
 /*---onboarding page----*/
@@ -281,6 +358,7 @@ nav .logo-container .logo {
     padding-top: 3px;
     margin-bottom: 575px;
 }
+
 
 /* ---Chat Container--- */
 
