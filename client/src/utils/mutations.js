@@ -22,3 +22,11 @@ mutation Mutation($username: String, $email: String!, $password: String!) {
   }
 }
 `;
+
+export const UPDATE_USER = gql`
+mutation UpdateUser($user: userInput!) {
+  updateUser(user: $user) {
+    username
+  }
+}
+`

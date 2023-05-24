@@ -35,6 +35,7 @@ const LoginForm = () => {
         throw new Error("something went wrong!");
       }
       alert(data.login.token)
+      window.location.href= "/onboarding"
       Auth.login(data.login.token);
     } catch (err) {
       console.error(err);

@@ -34,6 +34,7 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
       })
       alert(data.login.token)
       auth.login(data.login.token)
+      window.location.href="/onboarding"
       // const response = await axios.post(`${isSignUp ? "signup" : "login"}`, {
       //   email,
       //   password,

@@ -1,23 +1,43 @@
 import { useState } from "react";
 import Nav from "../components/Nav";
-import seeds from "/Users/stiven.mike/Documents/LoveLink-2/seeds"
+import Auth from "../utils/auth";
+import { useMutation } from "@apollo/client";
+import { UPDATE_USER } from "../utils/mutations";
 
 const OnBoarding = () => {
   const [formData, setFormData] = useState({
-    user_id: "",
-    first_name: "",
+    username: Auth.getProfile().data.username,
     dob_day: "",
     dob_month: "",
     dob_year: "",
     show_gender: false,
     gender_identity: "man",
     gender_interest: "woman",
-    email: "",
-    url: "",
-    matches: [],
+    pictures: "",
+    profile:"",
+    // email: "",
+    // url: "",
+    // matches: [],
   });
-  const handleSubmit = () => {
+  const [UpdateUser] = useMutation(UPDATE_USER);
+
+  console.log(Auth.getProfile());
+  const handleSubmit = async (event) => {
+  event.preventDefault()
+  console.log(formData)
+
     console.log("sumbmitted");
+    await UpdateUser({
+      variables: {
+        user: {
+          dob:formData.dob_month + "/" + formData.dob_day + "/" + formData.dob_year,
+          gender: formData.gender_identity.toString(),
+          interests: formData.gender_interest,
+          profile: formData.profile,
+          pictures: formData.pictures,
+        },
+      },
+    });
   };
   const handleChange = (e) => {
     console.log("change");
@@ -40,12 +60,12 @@ const OnBoarding = () => {
           <section>
             <label htmlFor="first_name">Username</label>
             <input
-              id="first_name"
+              id="username"
               type="text"
-              name="first_name"
-              placeholder="First Name"
+              name="username"
+              placeholder="username"
               required={true}
-              value={formData.first_name}
+              value={formData.username}
               onChange={handleChange}
             />
 
@@ -86,7 +106,7 @@ const OnBoarding = () => {
                 id="man-gender-identity"
                 type="radio"
                 name="gender_identity"
-                value={"man"}
+                value={formData.gender_identity}
                 onChange={handleChange}
                 checked={formData.gender_identity === "man"}
               />
@@ -95,7 +115,7 @@ const OnBoarding = () => {
                 id="woman-gender-identity"
                 type="radio"
                 name="gender_identity"
-                value={"woman"}
+                value={formData.gender_identity}
                 onChange={handleChange}
                 checked={formData.gender_identity === "woman"}
               />
@@ -104,7 +124,7 @@ const OnBoarding = () => {
                 id="more-gender-identity"
                 type="radio"
                 name="gender_identity"
-                value={"more"}
+                value={formData.gender_identity}
                 onChange={handleChange}
                 checked={formData.gender_identity === "other"}
               />
@@ -152,14 +172,14 @@ const OnBoarding = () => {
               <label htmlFor="everyone-gender-interest">Everyone</label>
             </div>
 
-            <label htmlFor="about">About Me</label>
+            <label htmlFor="aboutme">About Me</label>
             <input
               id="about"
               type="text"
-              name="about"
+              name="profile"
               required={true}
               placeholder="Tell us something about yourself.."
-              value={formData.about}
+              value={formData.profile}
               onChange={handleChange}
             />
             <input type="submit" />
@@ -169,7 +189,8 @@ const OnBoarding = () => {
             <label htmlFor="url">Profile Photo</label>
             <input
               type="url"
-              name="url"
+              name="pictures"
+              value={formData.pictures}
               id="url"
               onChange={handleChange}
               required={true}

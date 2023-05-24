@@ -59,6 +59,16 @@ const resolvers = {
 
       return { token, user };
     },
+
+    updateUser: async (parent, { user }, context) => {
+      console.log(user)
+      if (context.user) {
+        return await User.updateOne({
+          _id: context.user._id
+        }, user)
+      }
+    },
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 

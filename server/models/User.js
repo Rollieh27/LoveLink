@@ -18,9 +18,15 @@ const userSchema = new Schema(
         type: String,
         required: true,
       },
+
       age: {
         type: Number,
       },
+
+      dob: {
+        type: String
+      },
+
       gender: {
         type: String,
       },
@@ -28,13 +34,11 @@ const userSchema = new Schema(
         type: String,
       },
       profile: {
-        bio: String,
+        type: String,
       },
-      pictures: [
-        {
-          url: String,
-        },
-      ],
+      pictures:{
+        type: String,
+      }
     },
     {
       toJSON: {
