@@ -143,6 +143,36 @@ const SignupForm = () => {
         <div className="note">App coming soon</div>
       </div>
     </div>
+        <Form.Group>
+          <Form.Label htmlFor="confirm-password">Confirm Password</Form.Label>
+          <Form.Control
+            type="password"
+            placeholder="Confirm your password"
+            name="confirm"
+            onChange={handleInputChange}
+            value={userFormData.confirm || ''}
+            required
+          />
+          <Form.Control.Feedback type="invalid">
+            Password is required!
+          </Form.Control.Feedback>
+        </Form.Group>
+        <Button
+          // disabled={
+          //   !(
+          //     userFormData.username &&
+          //     userFormData.email &&
+          //     userFormData.password &&
+          //     userFormData.confirm
+          //   )
+          // }
+          type="submit"
+          variant="success"
+        >
+          Submit
+        </Button>
+      </Form>
+    </>
   );
 };
 
