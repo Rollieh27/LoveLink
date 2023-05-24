@@ -122,7 +122,7 @@ const SignupForm = () => {
             placeholder="Confirm your password"
             name="confirm"
             onChange={handleInputChange}
-            value={userFormData.confirm}
+            value={userFormData.confirm || ''}
             required
           />
           <Form.Control.Feedback type="invalid">
