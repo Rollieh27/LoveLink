@@ -126,6 +126,19 @@ nav .logo-container .logo {
     align-items: center;
 }
 
+/* .close-icon {
+    position: relative;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: black;
+    font-size: 24px;
+}
+
+.close-icon:hover {
+    color: #333;
+} */
+
 .signup-popup-content {
     display: flex;
     flex-direction: column;
@@ -182,7 +195,7 @@ nav .logo-container .logo {
 }
 
 .signup-popup-content .submit-button button {
-    width: 180px;
+    width: 250px;
     height: 35px;
     font-size: 18px;
     background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
@@ -359,11 +372,14 @@ nav .logo-container .logo {
     margin-bottom: 575px;
 }
 
+.card p {
+    color: white
+}
 
 /* ---Chat Container--- */
 
 .chat-container {
-    background-color: rgb(115, 195, 132);
+    background-color: white;
     width: 30%;
     /* margin-right: 50px; */
     flex: 0 0 auto;
@@ -384,6 +400,7 @@ nav .logo-container .logo {
     font-size: 20px;
     margin: 4px;
     padding: 10px;
+    background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
 }
 
 .chat-container.profile {
