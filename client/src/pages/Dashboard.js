@@ -145,6 +145,9 @@ const Dashboard = () => {
     },
   ];
 
+  const handleLogout = () => {
+    window.location.href = "/";
+  };
   const [lastDirection, setLastDirection] = useState();
 
   const swiped = (direction, nameToDelete) => {
@@ -184,6 +187,9 @@ const Dashboard = () => {
         </div>
       </div>
       {/* </div> */}
+      <button className="logout-button" onClick={handleLogout}>
+        Logout
+      </button>
     </div>
   );
 };

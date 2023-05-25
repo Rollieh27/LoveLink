@@ -439,7 +439,7 @@ input[type="checkbox"]:checked+.checkbox-label::after {
     height: 750px;
     display: center;
     justify-content: center;
-    margin-right: 230px;
+    /* margin-right: 200px; */
 }
 
 .card {
@@ -459,6 +459,24 @@ input[type="checkbox"]:checked+.checkbox-label::after {
 
 .card p {
     color: white
+}
+
+.logout-button {
+    color: #fff;
+    background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    font-weight: 500px;
+}
+
+.logout-button {
+    background-color: rgb(189, 180, 180);
+    color: rgb(160, 38, 75);
 }
 
 /* ---Chat Container--- */
