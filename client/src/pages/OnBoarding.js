@@ -43,6 +43,7 @@ const OnBoarding = () => {
         },
       },
     });
+    window.location.href = "/dashboard";
   };
   const handleChange = (e) => {
     console.log("change");
@@ -126,14 +127,14 @@ const OnBoarding = () => {
               />
               <label htmlFor="woman-gender-identity">Woman</label>
               <input
-                id="more-gender-identity"
+                id="other-gender-identity"
                 type="radio"
                 name="gender_identity"
                 value="other"
                 onChange={handleChange}
                 checked={formData.gender_identity === "other"}
               />
-              <label htmlFor="more-gender-identity">Other</label>
+              <label htmlFor="other-gender-identity">Other</label>
             </div>
 
             <label htmlFor="show-gender">Show gender on my profile</label>
@@ -141,7 +142,7 @@ const OnBoarding = () => {
               <input
                 id="show-gender"
                 type="checkbox"
-                name="gender_identity"
+                name="show_gender"
                 onChange={handleChange}
                 checked={formData.show_gender}
               />
@@ -178,14 +179,14 @@ const OnBoarding = () => {
               <label htmlFor="everyone-gender-interest">Everyone</label>
             </div>
 
-            <label htmlFor="aboutme">About Me</label>
+            <label htmlFor="about">About Me</label>
             <input
               id="about"
               type="text"
-              name="profile"
+              name="about"
               required={true}
               placeholder="Tell us something about yourself.."
-              value={formData.profile}
+              value={formData.about}
               onChange={handleChange}
             />
             <input type="submit" />
