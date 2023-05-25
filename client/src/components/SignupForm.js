@@ -3,7 +3,6 @@ import { Form, Alert } from "react-bootstrap";
 import { ADD_USER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
-
 const SignupForm = () => {
   // set initial form state
   const [userFormData, setUserFormData] = useState({
@@ -16,15 +15,12 @@ const SignupForm = () => {
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
   const [addUser, { error }] = useMutation(ADD_USER);
-
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
   };
-
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
     // check if form has everything (as per react-bootstrap docs)
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -40,16 +36,15 @@ const SignupForm = () => {
           password: userFormData.password,
         },
       });
-
       if (error) {
         throw new Error("something went wrong!");
       }
       Auth.login(data.addUser.token);
+      window.location.href = "/onboarding";
     } catch (err) {
       console.error(err);
       setShowAlert(true);
     }
-
     setUserFormData({
       username: "",
       email: "",
@@ -57,7 +52,6 @@ const SignupForm = () => {
       confirm: "",
     });
   };
-
   return (
     <div className="signup-popup">
       <div className="signup-popup-overlay"></div>
@@ -74,7 +68,6 @@ const SignupForm = () => {
           >
             Something went wrong with your signup!
           </Alert>
-
           <div className="form-group">
             <Form.Label htmlFor="username">Username</Form.Label>
             <Form.Control
@@ -89,7 +82,6 @@ const SignupForm = () => {
               username is required!
             </Form.Control.Feedback> */}
           </div>
-
           <div className="form-group">
             <Form.Label htmlFor="username">Email</Form.Label>
             <Form.Control
@@ -104,7 +96,6 @@ const SignupForm = () => {
               Email is required!
             </Form.Control.Feedback> */}
           </div>
-
           <div className="form-group">
             <Form.Label htmlFor="password">Password</Form.Label>
             <Form.Control
@@ -119,7 +110,6 @@ const SignupForm = () => {
               Password is required!
             </Form.Control.Feedback> */}
           </div>
-
           <div className="form-group">
             <Form.Label htmlFor="confirm-password">Confirm Password</Form.Label>
             <Form.Control
@@ -143,37 +133,6 @@ const SignupForm = () => {
         <div className="note">App coming soon</div>
       </div>
     </div>
-        <Form.Group>
-          <Form.Label htmlFor="confirm-password">Confirm Password</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Confirm your password"
-            name="confirm"
-            onChange={handleInputChange}
-            value={userFormData.confirm || ''}
-            required
-          />
-          <Form.Control.Feedback type="invalid">
-            Password is required!
-          </Form.Control.Feedback>
-        </Form.Group>
-        <Button
-          // disabled={
-          //   !(
-          //     userFormData.username &&
-          //     userFormData.email &&
-          //     userFormData.password &&
-          //     userFormData.confirm
-          //   )
-          // }
-          type="submit"
-          variant="success"
-        >
-          Submit
-        </Button>
-      </Form>
-    </>
   );
 };
-
 export default SignupForm;

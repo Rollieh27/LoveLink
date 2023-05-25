@@ -34,9 +34,8 @@ const LoginForm = () => {
       if (error) {
         throw new Error("something went wrong!");
       }
-      alert(data.login.token)
-      window.location.href= "/onboarding"
       Auth.login(data.login.token);
+      window.location.href = "/dashboard";
     } catch (err) {
       console.error(err);
       setShowAlert(true);

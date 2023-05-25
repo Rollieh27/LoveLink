@@ -14,7 +14,7 @@ const OnBoarding = () => {
     gender_identity: "man",
     gender_interest: "woman",
     pictures: "",
-    profile:"",
+    profile: "",
     // email: "",
     // url: "",
     // matches: [],
@@ -23,14 +23,19 @@ const OnBoarding = () => {
 
   console.log(Auth.getProfile());
   const handleSubmit = async (event) => {
-  event.preventDefault()
-  console.log(formData)
+    event.preventDefault();
+    console.log(formData);
 
     console.log("sumbmitted");
     await UpdateUser({
       variables: {
         user: {
-          dob:formData.dob_month + "/" + formData.dob_day + "/" + formData.dob_year,
+          dob:
+            formData.dob_month +
+            "/" +
+            formData.dob_day +
+            "/" +
+            formData.dob_year,
           gender: formData.gender_identity.toString(),
           interests: formData.gender_interest,
           profile: formData.profile,
@@ -106,7 +111,7 @@ const OnBoarding = () => {
                 id="man-gender-identity"
                 type="radio"
                 name="gender_identity"
-                value={formData.gender_identity}
+                value="man"
                 onChange={handleChange}
                 checked={formData.gender_identity === "man"}
               />
@@ -115,7 +120,7 @@ const OnBoarding = () => {
                 id="woman-gender-identity"
                 type="radio"
                 name="gender_identity"
-                value={formData.gender_identity}
+                value="woman"
                 onChange={handleChange}
                 checked={formData.gender_identity === "woman"}
               />
@@ -124,7 +129,7 @@ const OnBoarding = () => {
                 id="more-gender-identity"
                 type="radio"
                 name="gender_identity"
-                value={formData.gender_identity}
+                value="other"
                 onChange={handleChange}
                 checked={formData.gender_identity === "other"}
               />
@@ -140,6 +145,7 @@ const OnBoarding = () => {
                 onChange={handleChange}
                 checked={formData.show_gender}
               />
+              <label htmlFor="show-gender" className="checkbox-label"></label>
             </div>
             <label>Show Me</label>
             <div className="multiple-input-container">
@@ -196,7 +202,7 @@ const OnBoarding = () => {
               required={true}
             />
             <div className="photo-container"></div>
-            <img src={formData.url} alt="profile pic" />
+            <img src={formData.pictures} alt="profile pic" />
           </section>
         </form>
       </div>
