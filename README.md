@@ -29,6 +29,10 @@ Don't wait another moment to find love! Join Love Link today and embark on a jou
 ## Screenshots ##
 <img width="1417" alt="Screenshot 2023-05-25 at 4 31 17 PM" src="https://github.com/Rollieh27/LoveLink/assets/119374215/94ec6e44-f574-412d-bb6c-22e05bbb0f16">
 
+<img width="1148" alt="Screenshot 2023-05-25 at 4 44 48 PM" src="https://github.com/Rollieh27/LoveLink/assets/119374215/61fb5d22-d5ff-4f57-a9b7-5375d6e62659">
+
+<img width="1148" alt="Screenshot 2023-05-25 at 4 46 17 PM" src="https://github.com/Rollieh27/LoveLink/assets/119374215/bdb99023-34b0-4771-b93d-ae24df9cb2ab">
+
 
 ## Technologies ##
 MongoDB, Express, React, NodeJS, GraphQL, Mongoose, Heroku, VS Code
