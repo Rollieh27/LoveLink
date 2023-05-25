@@ -136,7 +136,7 @@ nav .logo-container .logo {
 }
 
 .close-icon:hover {
-    color: #333;
+    color: 
 } */
 
 .signup-popup-content {
@@ -256,6 +256,7 @@ nav .logo-container .logo {
 .onboarding form {
     display: flex;
     justify-content: center;
+
 }
 
 .onboarding form section {
@@ -264,6 +265,7 @@ nav .logo-container .logo {
     padding: 20px;
     width: 35%;
     text-align: start;
+
 }
 
 .onboarding form input {
@@ -276,7 +278,7 @@ nav .logo-container .logo {
 
 .onboarding form input:hover {
     color: rgb(48, 48, 48);
-    border: solid 2px rgb(255, 89, 64);
+    border: solid 2px rgb(254, 48, 114);
 }
 
 .onboarding form input::-webkit-outer-spin-button,
@@ -310,9 +312,88 @@ nav .logo-container .logo {
     width: 20%;
 }
 
-.onboarding form input[type=radio] {
+input[type=radio] {
     display: none;
 }
+
+input[type=radio]+label {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+
+}
+
+input[type=radio]+label:before {
+    content: "";
+    /* display: inline-block; */
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background-color: #fff;
+
+}
+
+input[type=radio]:checked+label:before {
+    border-color: rgb(254, 48, 114);
+    background-color: rgb(254, 48, 114);
+}
+
+input[type="radio"]+label:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0;
+}
+
+input[type="radio"]:checked+label:after {
+    opacity: 1;
+}
+
+/* Style the checkbox */
+/* Hide the default checkbox */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Style the custom checkbox */
+.checkbox-label {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    cursor: pointer;
+}
+
+/* Style the custom checkbox when checked */
+.checkbox-label::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #007bff;
+    position: relative;
+    top: 4px;
+    left: 4px;
+    visibility: hidden;
+}
+
+/* Show the custom checkbox when checked */
+input[type="checkbox"]:checked+.checkbox-label::after {
+    visibility: visible;
+}
+
 
 .onboarding form input[type=submit]:hover {
     background-color: rgb(254, 48, 114);
@@ -320,6 +401,10 @@ nav .logo-container .logo {
 
 .onboarding form input[type=submit]:active {
     background-color: blueviolet;
+}
+
+.photo-container {
+    size: 70%;
 }
 
 /*---dashboard page----*/
