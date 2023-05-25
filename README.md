@@ -43,9 +43,6 @@ SO THAT I can connect with like-minded individuals, explore meaningful relations
 ## Technologies ##
 MongoDB, Express, React, NodeJS, GraphQL, Mongoose, Heroku, VS Code
 
-## Challenges ##
-* 
-
 ## Future Features ##
 * Unlimited Likes 
 * Ability to see who liked you 
