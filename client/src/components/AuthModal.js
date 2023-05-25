@@ -12,7 +12,7 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
   const [confirmPassword, setConfirmPassword] = useState(null);
   const [error, setError] = useState(null);
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
-  const [login] = useMutation(LOGIN_USER)
+  const [login] = useMutation(LOGIN_USER);
   let navigate = useNavigate;
 
   console.log(email, password, confirmPassword);
@@ -29,12 +29,12 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
         return;
       }
       console.log("posting", email, password);
-      const {data} = await login({
-        variables:{email,password}
-      })
-      alert(data.login.token)
-      auth.login(data.login.token)
-      window.location.href="/onboarding"
+      const { data } = await login({
+        variables: { email, password },
+      });
+      alert(data.login.token);
+      auth.login(data.login.token);
+      window.location.href = "/dashboard";
       // const response = await axios.post(`${isSignUp ? "signup" : "login"}`, {
       //   email,
       //   password,
