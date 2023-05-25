@@ -1,6 +1,7 @@
   [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # LoveLink: Love is just a click away #
+## Boot Camp Project #3
 
 Deployed Link: [Click Here](https://lovelink.herokuapp.com/)
 
@@ -25,6 +26,11 @@ With Love Link, you can wave goodbye to endless scrolling and fruitless conversa
 Love Link's user-friendly interface and seamless communication tools make it effortless to connect and build meaningful connections. Love Link is the perfect platform to discover and nurture relationships.
 Don't wait another moment to find love! Join Love Link today and embark on a journey towards a deep, meaningful connection. Remember, love is just a link away.
 
+## User Story 
+
+AS A single professional seeking companionship, 
+I WANT to join LoveLink, the innovative dating sites
+SO THAT I can connect with like-minded individuals, explore meaningful relationships, and ultimately find my soulmate.
 
 ## Screenshots ##
 <img width="1417" alt="Screenshot 2023-05-25 at 4 31 17 PM" src="https://github.com/Rollieh27/LoveLink/assets/119374215/94ec6e44-f574-412d-bb6c-22e05bbb0f16">
@@ -46,10 +52,6 @@ MongoDB, Express, React, NodeJS, GraphQL, Mongoose, Heroku, VS Code
 * Addition filtering options 
 * Premium Plans
 * Superboost 
-
-
-## Status ##
-Coming Soon !
 
 ## Collaborators ##
  @Rollieh27<br>
