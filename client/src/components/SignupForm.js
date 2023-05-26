@@ -31,7 +31,6 @@ const SignupForm = () => {
       event.preventDefault();
       event.stopPropagation();
     }
-    alert(userFormData.email + userFormData.password + userFormData.confirm);
     try {
       const { data } = await addUser({
         variables: {
@@ -45,6 +44,7 @@ const SignupForm = () => {
         throw new Error("something went wrong!");
       }
       Auth.login(data.addUser.token);
+      window.location.href= "/onboarding"
     } catch (err) {
       console.error(err);
       setShowAlert(true);
@@ -139,11 +139,9 @@ const SignupForm = () => {
               Submit
             </button>
           </div>
-        </Form>
+        {/* </Form> */}
         <div className="note">App coming soon</div>
-      </div>
-    </div>
-        <Form.Group>
+        {/* <Form.Group>
           <Form.Label htmlFor="confirm-password">Confirm Password</Form.Label>
           <Form.Control
             type="password"
@@ -170,9 +168,11 @@ const SignupForm = () => {
           variant="success"
         >
           Submit
-        </Button>
+        </Button> */}
       </Form>
-    </>
+      </div>
+    </div>
+        
   );
 };
 

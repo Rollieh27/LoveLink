@@ -53,7 +53,7 @@ const Home = () => {
           {authToken ? "signout" : "Sign Up"}
         </button>
         {signUpModal && <SignupForm setSignUpModal={setSignUpModal} />}
-        {loginModal && <setLoginModal setLoginModal={setLoginModal} />}
+        {loginModal && <LoginForm setLoginModal={setLoginModal} />}
         {showModal && (
           <>
             <AuthModal
