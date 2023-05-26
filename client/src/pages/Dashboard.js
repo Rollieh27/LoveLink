@@ -137,14 +137,17 @@ const Dashboard = () => {
       interests: ["Technology", "Crafts"],
     },
     {
-      name: "Ben",
+      name: "Dylan",
       url: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg",
       age: 38,
       gender: "Male",
-      interests: ["Travel", "Museums"],
+      interests: ["Travel", "Museums", "Cats"],
     },
   ];
 
+  const handleLogout = () => {
+    window.location.href = "/";
+  };
   const [lastDirection, setLastDirection] = useState();
 
   const swiped = (direction, nameToDelete) => {
@@ -183,7 +186,9 @@ const Dashboard = () => {
           ))}
         </div>
       </div>
-      {/* </div> */}
+      <button className="logout-button" onClick={handleLogout}>
+        Logout
+      </button>
     </div>
   );
 };

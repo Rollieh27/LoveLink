@@ -14,7 +14,7 @@ const OnBoarding = () => {
     gender_identity: "man",
     gender_interest: "woman",
     pictures: "",
-    profile:"",
+    profile: "",
     // email: "",
     // url: "",
     // matches: [],
@@ -23,14 +23,19 @@ const OnBoarding = () => {
 
   console.log(Auth.getProfile());
   const handleSubmit = async (event) => {
-  event.preventDefault()
-  console.log(formData)
+    event.preventDefault();
+    console.log(formData);
 
     console.log("sumbmitted");
     await UpdateUser({
       variables: {
         user: {
-          dob:formData.dob_month + "/" + formData.dob_day + "/" + formData.dob_year,
+          dob:
+            formData.dob_month +
+            "/" +
+            formData.dob_day +
+            "/" +
+            formData.dob_year,
           gender: formData.gender_identity.toString(),
           interests: formData.gender_interest,
           profile: formData.profile,
@@ -38,6 +43,7 @@ const OnBoarding = () => {
         },
       },
     });
+    window.location.href = "/dashboard";
   };
   const handleChange = (e) => {
     console.log("change");
@@ -106,7 +112,7 @@ const OnBoarding = () => {
                 id="man-gender-identity"
                 type="radio"
                 name="gender_identity"
-                value={formData.gender_identity}
+                value="man"
                 onChange={handleChange}
                 checked={formData.gender_identity === "man"}
               />
@@ -115,20 +121,20 @@ const OnBoarding = () => {
                 id="woman-gender-identity"
                 type="radio"
                 name="gender_identity"
-                value={formData.gender_identity}
+                value="woman"
                 onChange={handleChange}
                 checked={formData.gender_identity === "woman"}
               />
               <label htmlFor="woman-gender-identity">Woman</label>
               <input
-                id="more-gender-identity"
+                id="other-gender-identity"
                 type="radio"
                 name="gender_identity"
-                value={formData.gender_identity}
+                value="other"
                 onChange={handleChange}
                 checked={formData.gender_identity === "other"}
               />
-              <label htmlFor="more-gender-identity">Other</label>
+              <label htmlFor="other-gender-identity">Other</label>
             </div>
 
             <label htmlFor="show-gender">Show gender on my profile</label>
@@ -136,10 +142,11 @@ const OnBoarding = () => {
               <input
                 id="show-gender"
                 type="checkbox"
-                name="gender_identity"
+                name="show_gender"
                 onChange={handleChange}
                 checked={formData.show_gender}
               />
+              <label htmlFor="show-gender" className="checkbox-label"></label>
             </div>
             <label>Show Me</label>
             <div className="multiple-input-container">
@@ -172,14 +179,14 @@ const OnBoarding = () => {
               <label htmlFor="everyone-gender-interest">Everyone</label>
             </div>
 
-            <label htmlFor="aboutme">About Me</label>
+            <label htmlFor="about">About Me</label>
             <input
               id="about"
               type="text"
-              name="profile"
+              name="about"
               required={true}
               placeholder="Tell us something about yourself.."
-              value={formData.profile}
+              value={formData.about}
               onChange={handleChange}
             />
             <input type="submit" />
@@ -196,7 +203,7 @@ const OnBoarding = () => {
               required={true}
             />
             <div className="photo-container"></div>
-            <img src={formData.url} alt="profile pic" />
+            <img src={formData.pictures} alt="profile pic" />
           </section>
         </form>
       </div>
