@@ -130,7 +130,7 @@ const SignupForm = () => {
               Submit
             </button>
           </div>
-        {/* </Form> */}
+        </Form>
         <div className="note">App coming soon</div>
       </div>
     </div>
